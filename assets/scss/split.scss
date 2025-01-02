@@ -11,6 +11,9 @@ $color-credit       : #485462;
 $color-link         : #848D96;
 $color-link-hover   : #CA486d;
 
+$menu-color1        : {{ .Site.Params.menu.color1 | default "$color-text" }};
+$menu-color2        : {{ .Site.Params.menu.color2 | default "$color-background" }};
+
 // Breakpoints
 $bp-smallish        : 991px;
 $bp-tablet          : 767px;
@@ -33,3 +36,4 @@ $animation-duration : 2s;
 @import "animation";
 @import "fonts";
 @import "content";
+@import "menu";
