@@ -1,15 +1,11 @@
-{{- if .Site.Params.menus }}
+{{- if site.Menus.main }}
 
 <div class="menu-container">
-    <div class="sticky">
-        {{- range $name := .Site.Params.menus }}
-        <div class="menu {{ $name }}">
-            {{- range index site.Menus $name }}
-            <a class="menu-item" href="{{ .URL }}">
-                {{ .Name }}
-            </a>
-            {{- end }}
-        </div>
+    <div class="menu main">
+        {{- range site.Menus.main }}
+        <a class="menu-item" href="{{ .URL }}">
+            {{ .Name }}
+        </a>
         {{- end }}
     </div>
 </div>
